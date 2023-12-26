@@ -1,0 +1,7 @@
+<!-- students/templates/students/add_student.html -->
+<h2>Добавление студента</h2>
+<form method="post" action="">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Добавить студента</button>
+</form>

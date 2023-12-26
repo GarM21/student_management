@@ -1,0 +1,11 @@
+<!-- students/templates/students/student_detail.html -->
+<h2>{{ student.name }}</h2>
+<h3>Оценки:</h3>
+<ul>
+  {% for grade in grades %}
+    <li>{{ grade.subject }}: {{ grade.score }} | <a href="{% url 'delete_grade' grade.id %}">Удалить</a></li>
+  {% endfor %}
+</ul>
+<p>Средний балл: {{ average_grade }}</p>
+
+<a href="{% url 'add_grade' %}?student_id={{ student.id }}">Добавить оценку</a>

@@ -1,0 +1,7 @@
+<!-- students/templates/students/add_grade.html -->
+<h2>Добавить оценку</h2>
+<form method="post" action="{% url 'add_grade' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Добавить</button>
+</form>

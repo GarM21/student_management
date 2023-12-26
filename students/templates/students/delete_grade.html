@@ -1,0 +1,7 @@
+<!-- students/templates/students/delete_grade.html -->
+<h2>Удалить оценку</h2>
+<form method="post" action="{% url 'delete_grade' grade.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Удалить</button>
+</form>

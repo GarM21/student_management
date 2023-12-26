@@ -1,0 +1,9 @@
+<!-- students/templates/students/home.html -->
+<h2>Список студентов</h2>
+<ul>
+  {% for student in students %}
+    <li><a href="{% url 'student_detail' student.id %}">{{ student.name }}</a></li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'add_student' %}">Добавить студента</a>
